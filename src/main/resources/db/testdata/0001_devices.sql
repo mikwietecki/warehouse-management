@@ -7,4 +7,4 @@ insert into device (id, manufacturer, model, ram, rom, color, spec, quantity) va
 insert into device (id, manufacturer, model, ram, rom, color, spec, quantity) values (7, 'HTC', 'HTC 7 Mozart', 8, 128, 'Red', 'EU' , 315);
 insert into device (id, manufacturer, model, ram, rom, color, spec, quantity) values (8, 'O2', 'O2 XDA IIi', 8, 52, 'Purple', 'EU' , 423);
 insert into device (id, manufacturer, model, ram, rom, color, spec, quantity) values (9, 'vivo', 'vivo V19 (Indonesia)', 8, 112, 'Pink', 'NON_EU' , 147);
-insert into device (id, manufacturer, model, ram, rom, color, spec, quantity) values (10, 'BLU', 'BLU Dash L2', 8, 64, 'Fuscia', 'EU' , 384);
+insert into device (id, manufacturer, model, ram, rom, color, spec, quantity) values (10, 'BLU', 'BLU Dash L2', 8, 64, 'Fuscia', 'EU' , 0);
