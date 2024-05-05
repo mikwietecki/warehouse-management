@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/warehouse-management
+    username: root
+  liquibase:
+    enabled: true
+    contexts: prod
+    change-log: db/changelog/master.xml
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true

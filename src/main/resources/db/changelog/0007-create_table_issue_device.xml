@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="0007-1" author="mwietecki">
+        <createTable tableName="issue_device">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="issue_id" type="BIGINT"/>
+            <column name="device_id" type="BIGINT"/>
+            <column name="quantity" type="INT"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="issue_device"
+                                 baseColumnNames="issue_id"
+                                 constraintName="fk_issue_device_issue_id"
+                                 referencedTableName="issue"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="issue_device"
+                                 baseColumnNames="device_id"
+                                 constraintName="fk_issue_device_device_id"
+                                 referencedTableName="device"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>
