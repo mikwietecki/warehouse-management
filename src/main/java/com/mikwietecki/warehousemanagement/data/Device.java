@@ -21,6 +21,7 @@ public class Device {
     private String color;
 
     @Enumerated(EnumType.STRING)
+    @Column(columnDefinition = "VARCHAR(255)")
     private Spec spec;
 
     private int quantity;

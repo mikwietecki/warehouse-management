@@ -13,5 +13,8 @@
     <include file="0005_create_table_issue.xml" relativeToChangelogFile="true" />
     <include file="0006_create_table_delivery_device.xml" relativeToChangelogFile="true" />
     <include file="0007-create_table_issue_device.xml" relativeToChangelogFile="true" />
+    
+    <!-- TEST DATA -->
+    <include file="../testdata/0001_devices.sql" relativeToChangelogFile="true" context="dev"/>
 
 </databaseChangeLog>

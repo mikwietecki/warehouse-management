@@ -14,7 +14,7 @@
             <column name="ram" type="INT"/>
             <column name="rom" type="INT"/>
             <column name="color" type="VARCHAR(50)"/>
-            <column name="spec" type="ENUM('EU', 'NON_EU')"/>
+            <column name="spec" type="VARCHAR(255)"/>
             <column name="quantity" type="INT"/>
         </createTable>
     </changeSet>
