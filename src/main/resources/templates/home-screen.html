@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/styles/main.css" th:href="@{/styles/main.css}">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <a href="#">HOME</a>
+        <a href="#">PRZYJĘCIE</a>
+        <a href="#">WYDANIE</a>
+        <a href="#">KOREKTA</a>
+        <a href="#">HISTORIA PRZYJĘĆ</a>
+        <a href="#">HISTORIA WYDAŃ</a>
+        <a href="#">KOREKTA</a>
+    </div>
+
+    <div class="main">
+        <h1>Aktualny stan magazynowy</h1>
+        <div class="search-container">
+            <form th:action="@{/devices}" method="get">
+                <input type="text" name="search" placeholder="Szukaj telefonu...">
+                <button type="submit">Szukaj</button>
+            </form>
+        </div>
+        <table class="devices-list">
+            <thead>
+            <tr>
+                <th>Model</th>
+                <th>Ilość</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="device : ${devices}" th:object="${device}">
+                <td th:text="|*{manufacturer} *{model} *{ram}/*{rom} *{color} *{spec}|"></td>
+                <td th:text="|*{quantity}|"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

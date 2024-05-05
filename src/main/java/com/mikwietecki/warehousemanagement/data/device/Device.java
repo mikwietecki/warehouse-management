@@ -1,4 +1,4 @@
-package com.mikwietecki.warehousemanagement.data;
+package com.mikwietecki.warehousemanagement.data.device;
 
 
 import jakarta.persistence.*;
