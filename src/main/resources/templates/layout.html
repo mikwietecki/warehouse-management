@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="https://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/styles/main.css" th:href="@{/styles/main.css}">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar" layout:fragment="sidebar">
+        <a href="#">HOME</a>
+        <a href="#">PRZYJĘCIE</a>
+        <a href="#">WYDANIE</a>
+        <a href="#">KOREKTA</a>
+        <a href="#">HISTORIA PRZYJĘĆ</a>
+        <a href="#">HISTORIA WYDAŃ</a>
+        <a href="#">KOREKTA</a>
+    </div>
+
+    <div class="main" layout:fragment="content"></div>
+</div>
+</body>
+</html>

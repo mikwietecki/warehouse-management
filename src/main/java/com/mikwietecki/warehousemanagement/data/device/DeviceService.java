@@ -18,4 +18,10 @@ public class DeviceService {
                 .map(DeviceDtoMapper::map)
                 .toList();
     }
+
+    public List<DeviceDto> findBySearchTerm(String searchTerm) {
+        return deviceRepository.findByManufacturerContainingIgnoreCaseOrModelContainingIgnoreCase(searchTerm,searchTerm).stream()
+                .map(DeviceDtoMapper::map)
+                .toList();
+    }
 }
