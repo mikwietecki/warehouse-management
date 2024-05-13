@@ -1,6 +1,8 @@
 package com.mikwietecki.warehousemanagement.data;
 
 
+import com.mikwietecki.warehousemanagement.data.Company;
+import com.mikwietecki.warehousemanagement.data.DeliveryDevice;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
